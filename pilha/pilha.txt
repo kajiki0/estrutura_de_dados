@@ -1,0 +1,6 @@
+Pilha(stack):
+    - estrutura de dados que permite remoção de elementos e inserção de novos elementos
+    - o elemento adicionado sempre é o do topo
+    - o elemento removido sempre é o do topo 
+    - a pilha segue uma politica conhecida como LIFO(Last In First Out)-- o ultimo a entrar é o primeiro a sair
+    - imagine uma pilha de pratos sujos onde voce sempre retira o prato do topo da pilha para lavar
