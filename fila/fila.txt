@@ -1,0 +1,52 @@
+Fila(Queue):
+    -adminite remoção e inserção de elementos
+    -cada remoção remove o elemento mais antigo da fila, isto é, o que está na estrutura a mais tempo
+    -FIFO(First In First Out) -- o primeiro elemento a entrar(INSERIDO) é o primeiro a sair(REMOVIDO)
+    - é como uma fila para comprar algo no mercado, o primeiro da fila é o primeiro a sair com as compras
+    - inserimos no final da fila e removemos do começo
+    
+fila vazia:o ultimo e o primeiro elemento apontam para o mesmo local
+
+quando sobrarem espaços para o ultimo elemento,mas ultrapassar a posição do numero maximo de elementos, devemos
+fazer uma relação com o resto do numero maximo de elementos. observe:
+
+0  1  2   3  4
+[ ][ ][12][5][7]  
+
+numero maximo:5
+ultimo: posição 5 do vetor
+primeiro posição 2 do vetor
+
+como adicionar um novo elemento no final da fila na posição 5?
+
+devemos pegar posição%numero_maximo
+
+logo, para a posição 5
+
+5%5 é 0
+
+entao o novo elemento(valor 20 por exemplo) vai para a posição 0 e agora
+o ultimo aumenta 1 e aponta para a posição 6( posição 6 imaginaria digamos assim, pois o numero maximo de elementos é 5) do vetor
+
+
+0   1   2   3  4 
+[20][ ][12][5][7]
+
+ainda temos um espaço
+6%5 é 1
+novo elemento = 10
+
+0   1   2   3   4
+[20][10][12][5][7]
+
+agora o ultimo incrementa + 1 e vai para a posição 7, mas o vetor ja esta cheio, entao nao é mais possivel
+ultimo: posição 7
+primeiro: posição 2
+para verificar isso: ultimo - primeiro = numero maximo (fila cheia)
+
+7-2 = 5 (fila cheia)
+
+
+
+a relação com o resto da divisao é um tipo de fila ciclica, onde sempre vai ter uma posição caso nao ultrapasse o valor maximo de elementos do vetor
+
